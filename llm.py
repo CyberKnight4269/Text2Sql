@@ -13,8 +13,6 @@ stream = client.interactions.create(
     stream=True
 )
 
-# print(stream.output_text)
-
 for event in stream:
     if event.event_type == "step.delta":
         if event.delta.type == "text":
